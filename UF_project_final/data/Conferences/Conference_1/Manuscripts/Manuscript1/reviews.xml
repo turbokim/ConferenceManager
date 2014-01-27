@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<reviews>
+	<review>
+		<reviewerID>StephenFaircloth</reviewerID>
+		<reviewFile>data/Conferences/Conference_1/Manuscripts/Manuscript1/Reviews/review1A.txt
+		</reviewFile>
+	</review>
+	<review>
+		<reviewerID>JeffDrew</reviewerID>
+		<reviewFile>data/Conferences/Conference_1/Manuscripts/Manuscript1/Reviews/review1B.txt
+		</reviewFile>
+	</review>
+<review>
+<reviewerID>JeffDrew</reviewerID>
+<reviewFile>data\Conferences\Conference_1\Manuscripts\Manuscript1\Reviews\\toJosh.c</reviewFile>
+</review>
+<review>
+<reviewerID>JeffDrew</reviewerID>
+<reviewFile>data\Conferences\Conference_1\Manuscripts\Manuscript1\Reviews\\toJosh.c</reviewFile>
+</review>
+</reviews>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manuscripts>
+<manuscript>
+<title>Manuscript1</title>
+<authorID>SylviaCrumb</authorID>
+<manFile>data\Conferences\Conference_1\Manuscripts\Manuscript1\manuscript_1.txt</manFile>
+<decision>undecided</decision>
+<reviews>
+</reviews>
+<recommendation>
+<subprogramID>EugeneLadd</subprogramID>
+<recFile>data/Conferences/Conference_1/Recommendations/recommendation_1.txt</recFile>
+</recommendation>
+</manuscript>
+<manuscript>
+<title>Manuscript2</title>
+<authorID>JeffDrew</authorID>
+<manFile>data\Conferences\Conference_1\Manuscripts\Manuscript2\manuscript_2.txt</manFile>
+<decision>undecided</decision>
+<reviews>
+</reviews>
+<recommendation>
+<subprogramID>JimmySouthwick</subprogramID>
+<recFile>data/Conferences/Conference_1/Recommendations/recommendation_2.txt</recFile>
+</recommendation>
+</manuscript>
+<manuscript>
+<title>Manuscsript1</title>
+<authorID>An Email</authorID>
+<manFile>Manuscsript1</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+<manuscript>
+<title>Manuscsript1</title>
+<authorID>An Email</authorID>
+<manFile>Manuscsript1</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+<manuscript>
+<title>Manuscsript1</title>
+<authorID>An Email</authorID>
+<manFile>Manuscsript1</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+<manuscript>
+<title>Manuscsript1</title>
+<authorID>An Email</authorID>
+<manFile>Manuscsript1</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+<manuscript>
+<title>Manuscsript1</title>
+<authorID>An Email</authorID>
+<manFile>Manuscsript1</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+<manuscript>
+<title>Manuscsript1</title>
+<authorID>An Email</authorID>
+<manFile>Manuscsript1</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+<manuscript>
+<title>Manuscsript1</title>
+<authorID>JeffDrew@email</authorID>
+<manFile>Manuscsript1</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+</manuscripts>

@@ -1,0 +1,35 @@
+package model;
+
+/**
+ * Role enumeration
+ * @author Kim Howard
+ *  December 2, 2012
+ *
+ */
+public enum Role {
+
+	PROGRAM_CHAIR, SUBPROGRAM_CHAIR, REVIEWER, AUTHOR, USER;
+	
+	/**
+	 * @author Navjot Kamal
+	 * Returns the Role associated with the string
+	 */
+	public static Role getRoleType(String the_string) {
+		Role the_role = null;
+		
+		if (the_string == null)
+			return the_role;
+		if (the_string.equalsIgnoreCase(PROGRAM_CHAIR.toString())) {
+			the_role = PROGRAM_CHAIR;
+		} else if (the_string.equalsIgnoreCase(SUBPROGRAM_CHAIR.toString())) {
+			the_role = SUBPROGRAM_CHAIR;
+		} else if (the_string.equalsIgnoreCase(REVIEWER.toString())) {
+			the_role = REVIEWER;
+		} else if (the_string.equalsIgnoreCase(AUTHOR.toString())) {
+			the_role = AUTHOR;
+		} else if (the_string.equalsIgnoreCase(USER.toString())) {
+			the_role = USER;
+		}
+		return the_role;
+	}
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manuscripts>
+
+
+
+
+
+
+<manuscript>
+<title>GloriaGeeks1</title>
+<authorID>GloriaMurphy</authorID>
+<manFile>data\Conferences\Super Geeks\Manuscripts\GloriaGeeks1\Edaleen Ice Cream.txt</manFile>
+<decision>unaccepted</decision>
+<recommendation>
+<subprogramID>LeonardMarkley</subprogramID>
+<recFile>null</recFile>
+</recommendation>
+</manuscript>
+<manuscript>
+<title>GloriaGeeks2</title>
+<authorID>GloriaMurphy</authorID>
+<manFile>data\Conferences\Super Geeks\Manuscripts\GloriaGeeks2\ZZZZZ.txt</manFile>
+<decision>unaccepted</decision>
+<recommendation>
+<subprogramID>CarlosByrum</subprogramID>
+<recFile>null</recFile>
+</recommendation>
+</manuscript>
+
+<manuscript>
+<title>StephenGeeks</title>
+<authorID>StephenFaircloth</authorID>
+<manFile>data\Conferences\Super Geeks\Manuscripts\StephenGeeks\gw-ranger.jpg</manFile>
+<decision>accepted</decision>
+<recommendation>
+<subprogramID>SylviaCrumb</subprogramID>
+<recFile>data\Conferences\Super Geeks\Manuscripts\StephenGeeks\Research Project 2011.docx</recFile>
+</recommendation>
+</manuscript>
+<manuscript>
+<title>SylviaGeeks2</title>
+<authorID>SylviaCrumb</authorID>
+<manFile>data\Conferences\Super Geeks\Manuscripts\SylviaGeeks2\uninstalled apps before win8.txt</manFile>
+<decision>unaccepted</decision>
+<recommendation>
+<subprogramID>JoshuaBrownlee</subprogramID>
+<recFile>null</recFile>
+</recommendation>
+</manuscript>
+
+
+<manuscript>
+<title>JeffsManEDIT</title>
+<authorID>JeffDrew</authorID>
+<manFile>data\Conferences\Super Geeks\Manuscripts\JeffsManEDIT\Edaleen Ice Cream.txt</manFile>
+<decision>accepted</decision>
+<recommendation>
+<subprogramID>RyanKesler</subprogramID>
+<recFile>null</recFile>
+</recommendation>
+</manuscript>
+
+<manuscript>
+<title>Jeffs Super geek manuscript</title>
+<authorID>JeffDrew</authorID>
+<manFile>data\Conferences\Super Geeks\Manuscripts\Jeffs Super geek manuscript\tkam essay.docx</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+</manuscripts>

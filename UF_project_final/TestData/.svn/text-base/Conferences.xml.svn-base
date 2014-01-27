@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Conferences>
+<conference>
+<name>TestConference</name>
+	<program_chairID>JeffDrew</program_chairID>
+	<deadlines>
+<submissions>Mar 12, 2011</submissions>
+<reviews>Mar 17, 2011</reviews>
+<recommendations>Mar 22, 2011</recommendations>
+</deadlines>
+</conference>
+</Conferences>

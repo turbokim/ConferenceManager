@@ -1,0 +1,134 @@
+
+/*
+ * User Class
+ * Kim Howard
+ * 11/10/2012
+ */
+package model;
+
+
+/**
+ * User Class
+ * @author Kim Howard
+ *  December 2, 2012
+ *
+ *
+ */
+public final class User {
+	/**
+	 * Fields
+	 */
+	public static final String USER_NAME = "User Name:";
+	public static final String EMAIL = "Email:";
+	public static final String UNIQUE_ID = "UniqueID:";
+	public static final String CURR_ROLE = "Current Role:";
+	public static final String NEW_LINE = "\n";
+	public static final String SPACE = " ";
+	
+	private final String my_name;
+	private final String my_email;
+	private final String my_uniqueID;
+	private Role my_currentRole;
+	
+	/***
+	 * Constructor for User class.
+	 * 
+	 * Sets the name, email, unique ID and the list of roles of the User
+	 * Establishes the current role by selecting USER if there is more than one Role,
+	 * and if there is just one Role, besides the USER, that Role is established as the
+	 * Current Role.
+	 * 
+	 * @param the_user
+	 * @param the_email
+	 * @param the_user_name
+	 */
+	public User(String the_name, String the_email, String the_uniqueID, String cur_role)
+	{		
+		my_name = the_name;
+		my_email = the_email;
+		my_uniqueID = the_uniqueID;
+		my_currentRole = Role.getRoleType(cur_role);		
+	}
+	
+	
+	/**
+	 * Returns the my_user.
+	 * @return my_user.
+	 */
+	public String getUserName()
+	{
+		return my_name;
+		
+	}
+	/**
+	 * Returns the my_email.
+	 * @return my_email.
+	 */
+	public String getEmail()
+	{		
+		return my_email;		
+	}
+	/**
+	 * Returns the my_user_name.
+	 * @return my_user_name;
+	 */
+	public String getUniqueID()
+	{		
+		return my_uniqueID;	
+	}
+	/**
+	 * Gets the Current Role from the User
+	 * @return
+	 */
+	public Role getCurrentRole()
+	{
+		return my_currentRole;
+	}
+	//pre: assuming the correct role will be chosen that is in list
+	//from GUI
+	/**
+	 * Sets the Current Role assuming a correct Role is chosen from 
+	 * the drop down list in the gui.
+	 */
+	public void setCurrentRole(Role the_role)
+	{
+		my_currentRole = the_role;
+	}
+	/**
+	 * Sets up a String of this class in the format
+	 * 
+	 * User Name: Kim
+	 * Email: kim@email.com
+	 * Unique ID: Kim
+	 * Current Role: PROGRAM_CHAIR
+	 * 
+	 */
+	public String toString()
+	{
+		StringBuilder sb = new StringBuilder();		
+		
+		sb.append(USER_NAME);
+		sb.append(SPACE);
+		sb.append(my_name);
+		sb.append(NEW_LINE);
+		
+		sb.append(EMAIL);
+		sb.append(SPACE);
+		sb.append(my_email);		
+		sb.append(NEW_LINE);
+		
+		sb.append(UNIQUE_ID);
+		sb.append(SPACE);
+		sb.append(my_uniqueID);	
+		sb.append(NEW_LINE);
+		
+		sb.append(CURR_ROLE);		
+		sb.append(SPACE);
+		sb.append(my_currentRole.toString());
+		sb.append(NEW_LINE);
+		sb.append(NEW_LINE);
+		
+		return sb.toString();		
+	}
+	
+}

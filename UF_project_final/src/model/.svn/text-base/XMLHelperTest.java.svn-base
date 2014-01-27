@@ -1,0 +1,51 @@
+package model;
+
+import static org.junit.Assert.*;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.w3c.dom.Document;
+
+public class XMLHelperTest {
+	public static String MANUSCRIPT_TEST_LOCATION = "TestData" + File.separatorChar + "Manuscripts.xml";
+	
+	private Document manuscriptDoc;
+
+	@Before
+	public void setUp() throws Exception {
+		
+		manuscriptDoc = XMLHelper.getDoc(new File(MANUSCRIPT_TEST_LOCATION));		
+		
+	}
+	@Test
+	public void testRemoveManuscript()
+	{
+		XMLHelper.removeManuscript("JeffsMan3", manuscriptDoc, "TestData" + File.separatorChar + "Manuscripts.xml");
+		//XMLHelper.writeDoc(manuscriptDoc, "TestData" + File.separatorChar + "Manuscripts.xml");
+	}
+	
+
+	@Test
+	public void testNodeStringHelper() {
+
+	}
+
+	@Test
+	public void testAppendElement() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	public void testGetDoc() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	public void testWriteDoc() {
+		fail("Not yet implemented"); // TODO
+	}
+
+}

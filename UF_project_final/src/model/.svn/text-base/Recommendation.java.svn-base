@@ -1,0 +1,53 @@
+package model;
+import java.io.File;
+
+/**
+ * A class that creates a recommendation object.
+ * @author Daniel C. Beraun
+ *  December 2, 2012
+ * 
+ */
+public class Recommendation {
+	// Instance fields
+	private User my_subprogram_chair;	
+	private File recommendation_doc;
+
+	/**A constructor to instantiate a
+	 * recommnendation.
+	 * @param the_subprogram_chair
+	 * @param recFile
+	 */
+	public Recommendation(User the_subprogram_chair, File recFile)
+	{
+		my_subprogram_chair = the_subprogram_chair;
+		recommendation_doc = recFile;
+	}
+	/**
+	 * A Recommendation is created when a Program Chair assigns
+	 * a subprogram chair to manuscripts. The subprogram chair will
+	 * then have access to this recommendation object when accessing 
+	 * the manuscript.
+	 * 
+	 * @param the_subprogram_chair
+	 */
+	public Recommendation(User the_subprogram_chair) {
+		my_subprogram_chair = the_subprogram_chair;
+		recommendation_doc = new File("src/recommendation.txt");
+	}
+	//Accessor and mutators (getters and setters)
+	public User get_subprogram_chair() {
+		return my_subprogram_chair;
+	}
+
+	public void set_subprogram_chair(User the_subprogram_chair) {
+		my_subprogram_chair = the_subprogram_chair;
+	}
+
+	public File get_recommendation_doc() {
+		return recommendation_doc;
+	}
+
+	public void set_recommendation_doc(File the_recommendation_doc) {
+		recommendation_doc = the_recommendation_doc;
+	}
+}

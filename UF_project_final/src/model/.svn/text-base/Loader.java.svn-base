@@ -1,0 +1,366 @@
+package model;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+/**
+ * Loader loads all data from the data file into lists by parsing the data
+ * within those files a DOM parser.
+ * 
+ * @author Kim Howard
+ * November 30, 2012
+ */
+public class Loader {
+	private File my_users;		
+	private File my_conference_list_file;
+	private Map<String, List<String>> my_conference_list;
+	private Map<String, User> my_user_map = new HashMap<String, User>();
+	private Document usersXML;
+	private Document conferenceListXML;
+	private Document conferenceManuscriptsXML;
+	private Document reviewerXML;
+	private String my_fileLocation;
+
+	/**
+	 * Constructor for Loader class
+	 * 
+	 * @throws FileNotFoundException
+	 */
+	public Loader(String fileLocation) throws FileNotFoundException {
+		my_fileLocation = fileLocation;
+		my_users = new File(fileLocation + "Users.xml");		
+		my_conference_list_file = new File(fileLocation + "Conferences.xml");			
+		my_conference_list = new HashMap<String, List<String>>();		
+		createUsers();// creates all the users of the system
+		createConferenceList();		
+	}
+
+	/**
+	 * Returns the Conference with the selected title.
+	 * 
+	 * @param title Conference Name
+	 * @return A Conference object
+	 */
+	public Conference getConference(String title) {
+		Conference current_conference = null;
+		if (title != null) {
+		String location = my_fileLocation + "Conferences/" + title
+				+ "/Manuscripts";		
+		
+		Map<String, Manuscript> manuscripts = createConferenceManuscripts(location);		
+		
+		current_conference = new Conference(title, getProgramChair(title),
+				my_conference_list.get(title), manuscripts);
+		}
+		return current_conference;
+	}
+	/**
+	 * Returns a parsed document of all the users of the System.
+	 * @return Document All users of the system.
+	 */
+	public Document getUsersXML()
+	{
+		return usersXML;
+	}
+	/**
+	 * Returns a parsed XML Document of all the manuscripts of 
+	 * the selected conference.
+	 * 
+	 * @return The parsed Document.
+	 */
+	public Document getconferenceManuscriptsXML()
+	{
+		return conferenceManuscriptsXML;
+	}
+	/**
+	 * Returns a parsed XML Document of all Reviews
+	 * of a selected manuscript.
+	 * @return The parsed Document.
+	 */
+	public Document getReviewsXML()
+	{
+		
+		return getReviewsXML();
+	}
+	/**
+	 * Returns a parsed Document containing a list of
+	 * all the Conferences and their Deadlines.
+	 * 
+	 * @return The parsed Document.
+	 */
+	public Document getConferenceListXML()
+	{
+		return conferenceListXML;
+	}
+
+	/**
+	 * Returns a map of Conference names with their corresponding deadlines for
+	 * a visual in the GUI. This does not instantiate the Conference Objects.
+	 * This is so a list of conferences can be displayed along with their
+	 * deadlines in the Main GUI. When one of the Conferences is Selected, then
+	 * that conference will be loaded into the system along with all of it's
+	 * users and manuscripts.
+	 * 
+	 * @return Map<String, List<String>> Conference names, conference deadlines
+	 */
+	public Map<String, List<String>> getConferenceList() {
+		return my_conference_list;
+	}
+	/**
+	 * This returns the maps of users. Mostly used in testing.
+	 * @return Mapping of Users with their uniqueIDs/.
+	 */
+	public Map<String, User> getUserMap()
+	{
+		return my_user_map;
+	}
+	
+	//this method is never used in our system since we don't have to add a user
+	//to the system according to the business rules
+	/**
+	 * Adds the User to the system checking first that the uniqueID is not
+	 * already taken
+	 *//*
+
+	public boolean addUser(User the_user) {
+		boolean isAdded = false;
+		if (!containsUser(the_user.getUniqueID())) {
+			my_user_map.put(the_user.getUniqueID(), the_user);
+			isAdded = true;
+		}		
+		return isAdded;
+	}
+*/
+	/**
+	 * Checks that there isn't a particular User Id assigned already.
+	 */
+	public boolean containsUser(String the_user_id) {
+		return my_user_map.containsKey(the_user_id);
+	}
+
+	/**
+	 * Gets the User per the UniqueID passed in, returns null if the user entered
+	 * does not exist.
+	 * 
+	 * @param the_id The uniqueID of the User.
+	 * @return The User associated with that uniqueID.
+	 */
+
+	public User getUser(String the_id) {
+		User the_user = null;
+		if (containsUser(the_id))
+			the_user = my_user_map.get(the_id);
+		return the_user;
+	}
+	
+	/****************************************************************
+	 * 		 
+	 * 
+	 * Parsing Methods	  
+	 * 	
+	 * 
+	 *****************************************************************/
+	/**
+	 * Parses and creates the list of Users of the Entire System.
+	 */
+	public void createUsers() {
+		String name;
+		String email;
+		String uniqueID;
+		String currentRole;
+
+		usersXML = XMLHelper.getDoc(my_users);
+		//	getDoc(my_users);
+		Element docEle = usersXML.getDocumentElement();
+		NodeList userList = docEle.getElementsByTagName("user");
+
+		for (int i = 0; i < userList.getLength(); i++) {
+			Node userNode = userList.item(i);
+			Element userElement = (Element) userNode;
+			
+			uniqueID = userElement.getAttribute("id");
+			name = XMLHelper.nodeToString("name", userElement);
+			email = XMLHelper.nodeToString("email", userElement);
+			currentRole = XMLHelper.nodeToString("currentRole", userElement);
+			
+			my_user_map.put(uniqueID, new User(name, email, uniqueID,
+					currentRole));
+		}
+	}
+	
+	/**
+	 * Parses and returns the chosen conference manuscripts.
+	 * If a new manuscript is created and not reviewed, etc. that portion
+	 * 
+	 * @author Navjot Kamal
+	 * @param docLocation
+	 * @return
+	 */
+	public Map<String, Manuscript> createConferenceManuscripts(
+			String docLocation) {
+		Map<String, Manuscript> manuscriptList = null;
+		
+		if (docLocation == null)
+			return manuscriptList;
+		String title;
+		String author;
+		String location;
+		String decision;
+		String subprogramChairID;
+		String recommendationFileLoc;
+		Manuscript manuscript;
+
+		List<Review> reviews = new ArrayList<Review>();
+		manuscriptList = new HashMap<String, Manuscript>();
+		
+		conferenceManuscriptsXML = XMLHelper.getDoc(new File(docLocation + "/Manuscripts.xml"));
+		Element xmlDoc = conferenceManuscriptsXML.getDocumentElement();// gets root element
+		NodeList listOfManuscripts = xmlDoc.getElementsByTagName("manuscript");
+
+		for (int i = 0; i < listOfManuscripts.getLength(); i++) {
+			Node manuscriptNode = listOfManuscripts.item(i);		
+			Element manuscriptElement = (Element) manuscriptNode;
+		
+			title = XMLHelper.nodeToString("title", manuscriptElement);
+			author = XMLHelper.nodeToString("authorID", manuscriptElement);
+			location = XMLHelper.nodeToString("manFile", manuscriptElement);
+			decision = XMLHelper.nodeToString("decision", manuscriptElement);
+			
+			NodeList recList = manuscriptElement.getElementsByTagName("recommendation");
+			
+			Node child = recList.item(0).getFirstChild();
+			
+			if(child == null)
+				
+			{
+				
+				manuscript = new Manuscript(my_user_map.get(author), new File(location), title);
+			}else
+			{
+				Element recElement = (Element)recList.item(0);
+				subprogramChairID = XMLHelper.nodeToString("subprogramID", recElement);				
+
+				Element recFileLocElement = XMLHelper.getListElement("recFile", recElement, 0);
+				recommendationFileLoc = recFileLocElement.getChildNodes().item(0)
+						.getNodeValue();
+				// Recommendation Created
+				Recommendation recObject = new Recommendation(
+						my_user_map.get(subprogramChairID), new File(
+								recommendationFileLoc));
+				//List of Reviews Created
+				//if no reviews yet then the list will be  empty
+				reviews = getReviews(new File(docLocation + File.separatorChar + 
+						title + File.separatorChar + "reviews.xml"));
+					
+				//Manuscript object created
+				manuscript = new Manuscript(my_user_map.get(author), new File(
+						location), title, Decision.getDecisionType(decision), reviews,
+						recObject);
+			}
+			manuscriptList.put(title, manuscript);
+		}		
+		return manuscriptList;
+	}
+	/**
+	 * Parses and returns a list of Reviews for a chosen manuscript given 
+	 * the location of the file within the manuscript folder.
+	 * 
+	 * @author Navjot Kamal
+	 * @param the_file
+	 * @return
+	 */
+	public List<Review> getReviews(File the_file) {
+		List<Review> reviewList = null;
+		if (the_file == null)
+			return reviewList;
+		reviewList = new ArrayList<Review>();
+		String reviewerID;
+		String reviewLoc;
+		reviewerXML = XMLHelper.getDoc(the_file);	
+		Element xmlDoc = reviewerXML.getDocumentElement();// gets root element
+		if(XMLHelper.getListElement("review", xmlDoc, 0) != null)
+		{
+			NodeList listOfReviews = xmlDoc.getElementsByTagName("review");
+			
+			for (int i = 0; i < listOfReviews.getLength(); i++) {
+				Node reviewNode = listOfReviews.item(i);
+				Element reviewElement = (Element) reviewNode;
+				reviewerID = XMLHelper.nodeToString("reviewerID", reviewElement);
+				reviewLoc = XMLHelper.nodeToString("reviewFile", reviewElement);			
+							
+				Review rev = new Review(my_user_map.get(reviewerID), reviewLoc);
+				reviewList.add(rev);
+			}
+		}	
+		
+		return reviewList;
+	}
+	/**
+	 * Gets the Program Chair UniqueID associated with the Conference
+	 * @param confName
+	 * @return
+	 */
+	public User getProgramChair(String confName)
+	{
+		String programChairID = null;		
+		conferenceListXML = XMLHelper.getDoc(my_conference_list_file);
+		Element docEle = conferenceListXML.getDocumentElement();// gets root element
+		NodeList listOfConferences = docEle.getElementsByTagName("conference");
+		for(int i = 0; i < listOfConferences.getLength(); i++)
+		{
+			Node conferenceNode = listOfConferences.item(i);
+			Element conferenceElement = (Element) conferenceNode;
+			if(XMLHelper.nodeToString("name", conferenceElement).equals(confName))
+			{
+				programChairID = XMLHelper.nodeToString("program_chairID", conferenceElement);
+				i = listOfConferences.getLength();
+			}
+			
+		}
+		my_user_map.get(programChairID);
+		return my_user_map.get(programChairID);
+	}
+
+	/**
+	 * Does not instantiate Conference Objects...just creates a list for viewing
+	 * String (name of Conference) List of dates 4 dates in order of
+	 * "submissions", "reviews", "recommendations", "resubmissions"
+	 */
+	public void createConferenceList() {//steve - made public
+		String name;		
+		my_conference_list.clear(); //steve
+		conferenceListXML = XMLHelper.getDoc(my_conference_list_file);	
+
+		Element docEle = conferenceListXML.getDocumentElement();// gets root element
+		NodeList listOfConferences = docEle.getElementsByTagName("conference");
+		for (int i = 0; i < listOfConferences.getLength(); i++) {
+			List<String> dates = new ArrayList<String>();
+			// get the first conference node
+			Node conferenceNode = listOfConferences.item(i);
+			// convert to an element to get access to element methods
+			Element conferenceElement = (Element) conferenceNode;
+			// get conference name
+			name = XMLHelper.nodeToString("name", conferenceElement);				
+			
+			NodeList deadlineList = conferenceElement
+					.getElementsByTagName("deadlines");
+			Element deadlineElement = (Element) deadlineList.item(0);
+			
+			dates.add(XMLHelper.nodeToString("submissions", deadlineElement));
+			dates.add(XMLHelper.nodeToString("reviews", deadlineElement));
+			dates.add(XMLHelper.nodeToString("recommendations", deadlineElement));
+			//dates.add(XMLHelper.nodeStringHelper("resubmissions", deadlineElement));
+			
+			my_conference_list.put(name, dates);
+		}
+	}	
+}

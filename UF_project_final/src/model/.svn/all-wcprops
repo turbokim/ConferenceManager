@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/179/trunk/src/model
+END
+Conference.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/182/trunk/src/model/Conference.java
+END
+Decision.java
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/182/trunk/src/model/Decision.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/182/trunk/src/model/User.java
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/20/trunk/src/model/.gitignore
+END
+Recommendation.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/182/trunk/src/model/Recommendation.java
+END
+Review.java
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/182/trunk/src/model/Review.java
+END
+XMLHelperTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/179/trunk/src/model/XMLHelperTest.java
+END
+Role.java
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/182/trunk/src/model/Role.java
+END
+Manuscript.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/182/trunk/src/model/Manuscript.java
+END
+XMLHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/175/trunk/src/model/XMLHelper.java
+END
+Loader.java
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/163/trunk/src/model/Loader.java
+END

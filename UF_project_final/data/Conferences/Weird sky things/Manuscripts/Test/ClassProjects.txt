@@ -1,0 +1,30 @@
+Web Crawler
+April 2013 – May 2013
+
+Created a generic Web crawler that could be used for a multitude of purposes, but
+will be used to collect data on pages as well as data on performance that will be
+analyzed by using multi-threaded application programming in Java.
+Operating System Scheduler Simulator
+May 2013 – June 2013
+
+Built an application engine that simulates a GPOS (General Purpose Operating
+System) scheduler. This project also demonstrates how the operating system
+coordinates the activities of multiple processes running concurrently. Program is
+written in C
+Simple Computer Simulator (SC-2)
+January 2013 – March 2013
+
+Created a simple computer simulator that supports executive-mode programming
+for protection of the kernel in real-time (RT) operating systems (RTOS) support
+for multi-tasking applications. Program is written in C and Assembly.
+LC+ Simulator
+October 2012 – December 2012
+
+Created a computational capabilities of the ALU Simulator as well as incorporate
+the ALU and Register set that you have already built into a more complete,
+functioning LC+ computer that can run an LC+ program. Program is written in
+Assembly.
+Database Project(Link)
+February 2013 – March 2013
+
+Created a back end and a programming interface for the front end that abstracts all of the database interaction for a small community public library.

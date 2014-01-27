@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manuscripts>
+<manuscript>
+<title>manscript</title>
+<authorID>AmandaPalmer</authorID>
+<manFile>data\Conferences\new conference\Manuscripts\manscript\toJosh.c</manFile>
+<decision>undecided</decision>
+<recommendation>
+<subprogramID>SylviaCrumb</subprogramID>
+<recFile>null</recFile>
+</recommendation>
+</manuscript>
+<manuscript>
+<title>manuscrip 2</title>
+<authorID>GloriaMurphy</authorID>
+<manFile>data\Conferences\new conference\Manuscripts\manuscrip 2\toJosh.c</manFile>
+<decision>undecided</decision>
+<recommendation>
+<subprogramID>SylviaCrumb</subprogramID>
+<recFile>null</recFile>
+</recommendation>
+</manuscript>
+<manuscript>
+<title>man 3</title>
+<authorID>JimmySouthwick</authorID>
+<manFile>data\Conferences\new conference\Manuscripts\man 3\toJosh.c</manFile>
+<decision>undecided</decision>
+<recommendation>
+<subprogramID>SylviaCrumb</subprogramID>
+<recFile>data\Conferences\new conference\Manuscripts\man 3\Research Project 2011.docx</recFile>
+</recommendation>
+</manuscript>
+<manuscript>
+<title>kan ide</title>
+<authorID>CurtisStidham</authorID>
+<manFile>data\Conferences\new conference\Manuscripts\kan ide\toJosh.c</manFile>
+<decision>undecided</decision>
+<recommendation>
+<subprogramID>SylviaCrumb</subprogramID>
+<recFile>null</recFile>
+</recommendation>
+</manuscript>
+<manuscript>
+<title>fdfdf</title>
+<authorID>EugeneLadd</authorID>
+<manFile>data\Conferences\new conference\Manuscripts\fdfdf\toJosh.c</manFile>
+<decision>undecided</decision>
+<recommendation>
+<subprogramID>SylviaCrumb</subprogramID>
+<recFile>null</recFile>
+</recommendation>
+</manuscript>
+</manuscripts>

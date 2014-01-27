@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/179/trunk/src/gui
+END
+LoginObservable.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/182/trunk/src/gui/LoginObservable.java
+END
+ConferenceMaker.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/182/trunk/src/gui/ConferenceMaker.java
+END
+RecommendationSubmission.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/182/trunk/src/gui/RecommendationSubmission.java
+END
+ReviewSubmission.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/182/trunk/src/gui/ReviewSubmission.java
+END
+SubProgramChairPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/182/trunk/src/gui/SubProgramChairPanel.java
+END
+ProgramChairPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/182/trunk/src/gui/ProgramChairPanel.java
+END
+ConferenceChooserObservable.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/182/trunk/src/gui/ConferenceChooserObservable.java
+END
+ReviewerPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/182/trunk/src/gui/ReviewerPanel.java
+END
+AuthorPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/182/trunk/src/gui/AuthorPanel.java
+END
+UserPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/182/trunk/src/gui/UserPanel.java
+END
+PaperSubmission.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/182/trunk/src/gui/PaperSubmission.java
+END
+ReviewerViewer.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/182/trunk/src/gui/ReviewerViewer.java
+END
+MainFrame.java
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/182/trunk/src/gui/MainFrame.java
+END
+ManuscriptEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/182/trunk/src/gui/ManuscriptEditor.java
+END
+FileDownloader.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/182/trunk/src/gui/FileDownloader.java
+END

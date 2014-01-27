@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Conferences>
+<conference>
+<name>JeffsConference</name>
+	<program_chairID>JeffDrew</program_chairID>
+	<deadlines>
+<submissions>Mar 12, 2011</submissions>
+<reviews>Mar 17, 2011</reviews>
+<recommendations>Mar 22, 2011</recommendations>
+</deadlines>
+</conference>
+<conference>
+<name>SylviaConference</name>
+<program_chairID>SylviaCrumb</program_chairID>
+<deadlines>
+<submissions>May 5, 2013</submissions>
+<reviews>May 10, 2013</reviews>
+<recommendations>May 15, 2013</recommendations>
+</deadlines>
+</conference>
+<conference>
+<name>Super Geeks</name>
+<program_chairID>JeffDrew</program_chairID>
+<deadlines>
+<submissions>Jul 29, 2015</submissions>
+<reviews>Aug 3, 2015</reviews>
+<recommendations>Aug 8, 2015</recommendations>
+</deadlines>
+</conference>
+<conference>
+<name>Stephen's Super Conference</name>
+<program_chairID>StephenFaircloth</program_chairID>
+<deadlines>
+<submissions>Mar 1, 2013</submissions>
+<reviews>Mar 6, 2013</reviews>
+<recommendations>Mar 11, 2013</recommendations>
+</deadlines>
+</conference>
+<conference>
+<name>IEEE Supergeeks Lennhy</name>
+<program_chairID>LeonardMarkley</program_chairID>
+<deadlines>
+<submissions>Dec 17, 2012</submissions>
+<reviews>Dec 22, 2012</reviews>
+<recommendations>Dec 27, 2012</recommendations>
+</deadlines>
+</conference>
+<conference>
+<name>Weird sky things</name>
+<program_chairID>CurtisStidham</program_chairID>
+<deadlines>
+<submissions>Dec 17, 2012</submissions>
+<reviews>Dec 22, 2012</reviews>
+<recommendations>Dec 27, 2012</recommendations>
+</deadlines>
+</conference>
+<conference>
+<name>new conference</name>
+<program_chairID>JeffDrew</program_chairID>
+<deadlines>
+<submissions>Dec 17, 2012</submissions>
+<reviews>Dec 22, 2012</reviews>
+<recommendations>Dec 27, 2012</recommendations>
+</deadlines>
+</conference>
+</Conferences>

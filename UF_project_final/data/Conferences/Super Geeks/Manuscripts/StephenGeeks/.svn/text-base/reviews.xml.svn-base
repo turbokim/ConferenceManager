@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<reviews>
+	<review>
+		<reviewerID>EugeneLadd</reviewerID>
+		<reviewFile>data\Conferences\Super Geeks\Manuscripts\StephenGeeks\Reviews\review1.txt</reviewFile>
+	</review>
+<review>
+<reviewerID>AmandaPalmer</reviewerID>
+<reviewFile>data\Conferences\Super Geeks\Manuscripts\StephenGeeks\Reviews\\tkam essay.docx</reviewFile>
+</review>
+<review>
+<reviewerID>CarlosByrum</reviewerID>
+<reviewFile>null</reviewFile>
+</review>
+<review>
+<reviewerID>JosephHawkins</reviewerID>
+<reviewFile>null</reviewFile>
+</review>
+<review>
+<reviewerID>DorothyFleetwood</reviewerID>
+<reviewFile>null</reviewFile>
+</review>
+<review>
+<reviewerID>JoshuaBrownlee</reviewerID>
+<reviewFile>null</reviewFile>
+</review>
+<review>
+<reviewerID>BlancaDorsey</reviewerID>
+<reviewFile>null</reviewFile>
+</review>
+</reviews>

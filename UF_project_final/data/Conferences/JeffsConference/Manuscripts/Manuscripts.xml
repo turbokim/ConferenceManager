@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manuscripts>
+<manuscript>
+<title>SylviaToJeff1</title>
+<authorID>SylviaCrumb</authorID>
+<manFile>data\Conferences\JeffsConference\Manuscripts\SylviaToJeff1\circles.png</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+<manuscript>
+<title>SylviaToJeff2</title>
+<authorID>SylviaCrumb</authorID>
+<manFile>data\Conferences\JeffsConference\Manuscripts\SylviaToJeff2\gw-ranger.jpg</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+<manuscript>
+<title>JeffToJeff</title>
+<authorID>JeffDrew</authorID>
+<manFile>data\Conferences\JeffsConference\Manuscripts\JeffToJeff\ZZZZZ.txt</manFile>
+<decision>undecided</decision>
+<recommendation/>
+</manuscript>
+
+
+</manuscripts>
